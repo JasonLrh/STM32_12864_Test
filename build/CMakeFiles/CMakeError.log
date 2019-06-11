@@ -1,0 +1,240 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a1461/fast 
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_a1461.dir/build.make CMakeFiles/cmTC_a1461.dir/build
+Building C object CMakeFiles/cmTC_a1461.dir/testCCompiler.c.o
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_a1461.dir/testCCompiler.c.o   -c /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_a1461
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1461.dir/link.txt --verbose=1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_a1461.dir/testCCompiler.c.o  -o cmTC_a1461 
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000008018
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_a1461] Error 1
+make: *** [cmTC_a1461/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f5a77/fast 
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_f5a77.dir/build.make CMakeFiles/cmTC_f5a77.dir/build
+Building C object CMakeFiles/cmTC_f5a77.dir/testCCompiler.c.o
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_f5a77.dir/testCCompiler.c.o   -c /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_f5a77
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5a77.dir/link.txt --verbose=1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_f5a77.dir/testCCompiler.c.o  -o cmTC_f5a77 
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000008018
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_f5a77] Error 1
+make: *** [cmTC_f5a77/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a7757/fast 
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_a7757.dir/build.make CMakeFiles/cmTC_a7757.dir/build
+Building C object CMakeFiles/cmTC_a7757.dir/testCCompiler.c.o
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_a7757.dir/testCCompiler.c.o   -c /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_a7757
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7757.dir/link.txt --verbose=1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_a7757.dir/testCCompiler.c.o  -o cmTC_a7757 
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000008018
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_a7757] Error 1
+make: *** [cmTC_a7757/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bb16c/fast 
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_bb16c.dir/build.make CMakeFiles/cmTC_bb16c.dir/build
+Building C object CMakeFiles/cmTC_bb16c.dir/testCCompiler.c.o
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_bb16c.dir/testCCompiler.c.o   -c /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_bb16c
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb16c.dir/link.txt --verbose=1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_bb16c.dir/testCCompiler.c.o  -o cmTC_bb16c 
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000008018
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_bb16c] Error 1
+make: *** [cmTC_bb16c/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_db97d/fast 
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_db97d.dir/build.make CMakeFiles/cmTC_db97d.dir/build
+Building C object CMakeFiles/cmTC_db97d.dir/testCCompiler.c.o
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_db97d.dir/testCCompiler.c.o   -c /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_db97d
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db97d.dir/link.txt --verbose=1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_db97d.dir/testCCompiler.c.o  -o cmTC_db97d 
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000008018
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_db97d] Error 1
+make: *** [cmTC_db97d/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d6893/fast 
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_d6893.dir/build.make CMakeFiles/cmTC_d6893.dir/build
+Building C object CMakeFiles/cmTC_d6893.dir/testCCompiler.c.o
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_d6893.dir/testCCompiler.c.o   -c /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_d6893
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6893.dir/link.txt --verbose=1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_d6893.dir/testCCompiler.c.o  -o cmTC_d6893 
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000008018
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_d6893] Error 1
+make: *** [cmTC_d6893/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5dd8f/fast 
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_5dd8f.dir/build.make CMakeFiles/cmTC_5dd8f.dir/build
+Building C object CMakeFiles/cmTC_5dd8f.dir/testCCompiler.c.o
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_5dd8f.dir/testCCompiler.c.o   -c /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_5dd8f
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5dd8f.dir/link.txt --verbose=1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_5dd8f.dir/testCCompiler.c.o  -o cmTC_5dd8f 
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000008018
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_5dd8f] Error 1
+make: *** [cmTC_5dd8f/fast] Error 2
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b9399/fast 
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_b9399.dir/build.make CMakeFiles/cmTC_b9399.dir/build
+Building C object CMakeFiles/cmTC_b9399.dir/testCCompiler.c.o
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_b9399.dir/testCCompiler.c.o   -c /Users/jason/Desktop/STM32F1/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_b9399
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9399.dir/link.txt --verbose=1
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/arm-none-eabi-gcc-7.2.1   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_b9399.dir/testCCompiler.c.o  -o cmTC_b9399 
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol arch_paths_first; defaulting to 0000000000008018
+/Users/jason/CMDTools/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a(lib_a-exit.o): In function `exit':
+exit.c:(.text.exit+0x2c): undefined reference to `_exit'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_b9399] Error 1
+make: *** [cmTC_b9399/fast] Error 2
+
+

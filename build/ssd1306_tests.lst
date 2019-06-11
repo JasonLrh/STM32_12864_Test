@@ -1,0 +1,633 @@
+ARM GAS  /var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"ssd1306_tests.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.SSD1306_TestBorder,"ax",%progbits
+  16              		.align	1
+  17              		.global	SSD1306_TestBorder
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	SSD1306_TestBorder:
+  24              	.LFB66:
+  25              		.file 1 "Drivers/ssd1306/ssd1306_tests.c"
+   1:Drivers/ssd1306/ssd1306_tests.c **** #include "ssd1306.h"
+   2:Drivers/ssd1306/ssd1306_tests.c **** #include <string.h>
+   3:Drivers/ssd1306/ssd1306_tests.c **** 
+   4:Drivers/ssd1306/ssd1306_tests.c **** void SSD1306_TestBorder() {
+  26              		.loc 1 4 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30 0000 70B5     		push	{r4, r5, r6, lr}
+  31              	.LCFI0:
+  32              		.cfi_def_cfa_offset 16
+  33              		.cfi_offset 4, -16
+  34              		.cfi_offset 5, -12
+  35              		.cfi_offset 6, -8
+  36              		.cfi_offset 14, -4
+   5:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_Fill(Black);
+  37              		.loc 1 5 0
+  38 0002 0020     		movs	r0, #0
+  39 0004 FFF7FEFF 		bl	SSD1306_Fill
+  40              	.LVL0:
+   6:Drivers/ssd1306/ssd1306_tests.c ****    
+   7:Drivers/ssd1306/ssd1306_tests.c ****     uint32_t start = HAL_GetTick();
+  41              		.loc 1 7 0
+  42 0008 FFF7FEFF 		bl	HAL_GetTick
+  43              	.LVL1:
+  44 000c 0646     		mov	r6, r0
+  45              	.LVL2:
+   8:Drivers/ssd1306/ssd1306_tests.c ****     uint32_t end = start;
+   9:Drivers/ssd1306/ssd1306_tests.c ****     uint8_t x = 0;
+  10:Drivers/ssd1306/ssd1306_tests.c ****     uint8_t y = 0;
+  46              		.loc 1 10 0
+  47 000e 0024     		movs	r4, #0
+   9:Drivers/ssd1306/ssd1306_tests.c ****     uint8_t y = 0;
+ARM GAS  /var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s 			page 2
+
+
+  48              		.loc 1 9 0
+  49 0010 2546     		mov	r5, r4
+  50 0012 15E0     		b	.L6
+  51              	.LVL3:
+  52              	.L2:
+  11:Drivers/ssd1306/ssd1306_tests.c ****     do {
+  12:Drivers/ssd1306/ssd1306_tests.c ****         SSD1306_DrawPixel(x, y, Black);
+  13:Drivers/ssd1306/ssd1306_tests.c **** 
+  14:Drivers/ssd1306/ssd1306_tests.c ****         if((y == 0) && (x < 127))
+  15:Drivers/ssd1306/ssd1306_tests.c ****             x++;
+  16:Drivers/ssd1306/ssd1306_tests.c ****         else if((x == 127) && (y < 63))
+  53              		.loc 1 16 0
+  54 0014 7F2D     		cmp	r5, #127
+  55 0016 1FD0     		beq	.L8
+  56              	.L4:
+  17:Drivers/ssd1306/ssd1306_tests.c ****             y++;
+  18:Drivers/ssd1306/ssd1306_tests.c ****         else if((y == 63) && (x > 0)) 
+  57              		.loc 1 18 0
+  58 0018 3F2C     		cmp	r4, #63
+  59 001a 22D0     		beq	.L9
+  60              	.L5:
+  19:Drivers/ssd1306/ssd1306_tests.c ****             x--;
+  20:Drivers/ssd1306/ssd1306_tests.c ****         else
+  21:Drivers/ssd1306/ssd1306_tests.c ****             y--;
+  61              		.loc 1 21 0
+  62 001c 013C     		subs	r4, r4, #1
+  63              	.LVL4:
+  64 001e E4B2     		uxtb	r4, r4
+  65              	.LVL5:
+  66              	.L3:
+  22:Drivers/ssd1306/ssd1306_tests.c **** 
+  23:Drivers/ssd1306/ssd1306_tests.c ****         SSD1306_DrawPixel(x, y, White);
+  67              		.loc 1 23 0
+  68 0020 0122     		movs	r2, #1
+  69 0022 2146     		mov	r1, r4
+  70 0024 2846     		mov	r0, r5
+  71 0026 FFF7FEFF 		bl	SSD1306_DrawPixel
+  72              	.LVL6:
+  24:Drivers/ssd1306/ssd1306_tests.c ****         SSD1306_UpdateScreen();
+  73              		.loc 1 24 0
+  74 002a FFF7FEFF 		bl	SSD1306_UpdateScreen
+  75              	.LVL7:
+  25:Drivers/ssd1306/ssd1306_tests.c ****     
+  26:Drivers/ssd1306/ssd1306_tests.c ****         HAL_Delay(5);
+  76              		.loc 1 26 0
+  77 002e 0520     		movs	r0, #5
+  78 0030 FFF7FEFF 		bl	HAL_Delay
+  79              	.LVL8:
+  27:Drivers/ssd1306/ssd1306_tests.c ****         end = HAL_GetTick();
+  80              		.loc 1 27 0
+  81 0034 FFF7FEFF 		bl	HAL_GetTick
+  82              	.LVL9:
+  28:Drivers/ssd1306/ssd1306_tests.c ****     } while((end - start) < 8000);
+  83              		.loc 1 28 0
+  84 0038 801B     		subs	r0, r0, r6
+  85              	.LVL10:
+  86 003a B0F5FA5F 		cmp	r0, #8000
+ARM GAS  /var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s 			page 3
+
+
+  87 003e 15D2     		bcs	.L10
+  88              	.LVL11:
+  89              	.L6:
+  12:Drivers/ssd1306/ssd1306_tests.c **** 
+  90              		.loc 1 12 0
+  91 0040 0022     		movs	r2, #0
+  92 0042 2146     		mov	r1, r4
+  93 0044 2846     		mov	r0, r5
+  94 0046 FFF7FEFF 		bl	SSD1306_DrawPixel
+  95              	.LVL12:
+  14:Drivers/ssd1306/ssd1306_tests.c ****             x++;
+  96              		.loc 1 14 0
+  97 004a 002C     		cmp	r4, #0
+  98 004c E2D1     		bne	.L2
+  14:Drivers/ssd1306/ssd1306_tests.c ****             x++;
+  99              		.loc 1 14 0 is_stmt 0 discriminator 1
+ 100 004e 7E2D     		cmp	r5, #126
+ 101 0050 E0D8     		bhi	.L2
+  15:Drivers/ssd1306/ssd1306_tests.c ****         else if((x == 127) && (y < 63))
+ 102              		.loc 1 15 0 is_stmt 1
+ 103 0052 0135     		adds	r5, r5, #1
+ 104              	.LVL13:
+ 105 0054 EDB2     		uxtb	r5, r5
+ 106              	.LVL14:
+ 107 0056 E3E7     		b	.L3
+ 108              	.L8:
+  16:Drivers/ssd1306/ssd1306_tests.c ****             y++;
+ 109              		.loc 1 16 0 discriminator 1
+ 110 0058 3E2C     		cmp	r4, #62
+ 111 005a DDD8     		bhi	.L4
+  17:Drivers/ssd1306/ssd1306_tests.c ****         else if((y == 63) && (x > 0)) 
+ 112              		.loc 1 17 0
+ 113 005c 0134     		adds	r4, r4, #1
+ 114              	.LVL15:
+ 115 005e E4B2     		uxtb	r4, r4
+ 116              	.LVL16:
+ 117 0060 DEE7     		b	.L3
+ 118              	.L9:
+  18:Drivers/ssd1306/ssd1306_tests.c ****             x--;
+ 119              		.loc 1 18 0 discriminator 1
+ 120 0062 002D     		cmp	r5, #0
+ 121 0064 DAD0     		beq	.L5
+  19:Drivers/ssd1306/ssd1306_tests.c ****         else
+ 122              		.loc 1 19 0
+ 123 0066 013D     		subs	r5, r5, #1
+ 124              	.LVL17:
+ 125 0068 EDB2     		uxtb	r5, r5
+ 126              	.LVL18:
+ 127 006a D9E7     		b	.L3
+ 128              	.L10:
+  29:Drivers/ssd1306/ssd1306_tests.c ****    
+  30:Drivers/ssd1306/ssd1306_tests.c ****     HAL_Delay(1000);
+ 129              		.loc 1 30 0
+ 130 006c 4FF47A70 		mov	r0, #1000
+ 131 0070 FFF7FEFF 		bl	HAL_Delay
+ 132              	.LVL19:
+  31:Drivers/ssd1306/ssd1306_tests.c **** }
+ARM GAS  /var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s 			page 4
+
+
+ 133              		.loc 1 31 0
+ 134 0074 70BD     		pop	{r4, r5, r6, pc}
+ 135              		.cfi_endproc
+ 136              	.LFE66:
+ 138              		.section	.text.SSD1306_TestFonts,"ax",%progbits
+ 139              		.align	1
+ 140              		.global	SSD1306_TestFonts
+ 141              		.syntax unified
+ 142              		.thumb
+ 143              		.thumb_func
+ 144              		.fpu softvfp
+ 146              	SSD1306_TestFonts:
+ 147              	.LFB67:
+  32:Drivers/ssd1306/ssd1306_tests.c **** 
+  33:Drivers/ssd1306/ssd1306_tests.c **** void SSD1306_TestFonts() {
+ 148              		.loc 1 33 0
+ 149              		.cfi_startproc
+ 150              		@ args = 0, pretend = 0, frame = 0
+ 151              		@ frame_needed = 0, uses_anonymous_args = 0
+ 152 0000 08B5     		push	{r3, lr}
+ 153              	.LCFI1:
+ 154              		.cfi_def_cfa_offset 8
+ 155              		.cfi_offset 3, -8
+ 156              		.cfi_offset 14, -4
+  34:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_Fill(Black);
+ 157              		.loc 1 34 0
+ 158 0002 0020     		movs	r0, #0
+ 159 0004 FFF7FEFF 		bl	SSD1306_Fill
+ 160              	.LVL20:
+  35:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_SetCursor(2, 0);
+ 161              		.loc 1 35 0
+ 162 0008 0021     		movs	r1, #0
+ 163 000a 0220     		movs	r0, #2
+ 164 000c FFF7FEFF 		bl	SSD1306_SetCursor
+ 165              	.LVL21:
+  36:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_WriteString("Font 16x26", Font_16x26, White);
+ 166              		.loc 1 36 0
+ 167 0010 0E4A     		ldr	r2, .L13
+ 168 0012 0123     		movs	r3, #1
+ 169 0014 06CA     		ldm	r2, {r1, r2}
+ 170 0016 0E48     		ldr	r0, .L13+4
+ 171 0018 FFF7FEFF 		bl	SSD1306_WriteString
+ 172              	.LVL22:
+  37:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_SetCursor(2, 26);
+ 173              		.loc 1 37 0
+ 174 001c 1A21     		movs	r1, #26
+ 175 001e 0220     		movs	r0, #2
+ 176 0020 FFF7FEFF 		bl	SSD1306_SetCursor
+ 177              	.LVL23:
+  38:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_WriteString("Font 11x18", Font_11x18, White);
+ 178              		.loc 1 38 0
+ 179 0024 0B4A     		ldr	r2, .L13+8
+ 180 0026 0123     		movs	r3, #1
+ 181 0028 06CA     		ldm	r2, {r1, r2}
+ 182 002a 0B48     		ldr	r0, .L13+12
+ 183 002c FFF7FEFF 		bl	SSD1306_WriteString
+ 184              	.LVL24:
+ARM GAS  /var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s 			page 5
+
+
+  39:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_SetCursor(2, 26+18);
+ 185              		.loc 1 39 0
+ 186 0030 2C21     		movs	r1, #44
+ 187 0032 0220     		movs	r0, #2
+ 188 0034 FFF7FEFF 		bl	SSD1306_SetCursor
+ 189              	.LVL25:
+  40:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_WriteString("Font 7x10", Font_7x10, White);
+ 190              		.loc 1 40 0
+ 191 0038 084A     		ldr	r2, .L13+16
+ 192 003a 0123     		movs	r3, #1
+ 193 003c 06CA     		ldm	r2, {r1, r2}
+ 194 003e 0848     		ldr	r0, .L13+20
+ 195 0040 FFF7FEFF 		bl	SSD1306_WriteString
+ 196              	.LVL26:
+  41:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_UpdateScreen();
+ 197              		.loc 1 41 0
+ 198 0044 FFF7FEFF 		bl	SSD1306_UpdateScreen
+ 199              	.LVL27:
+  42:Drivers/ssd1306/ssd1306_tests.c **** }
+ 200              		.loc 1 42 0
+ 201 0048 08BD     		pop	{r3, pc}
+ 202              	.L14:
+ 203 004a 00BF     		.align	2
+ 204              	.L13:
+ 205 004c 00000000 		.word	Font_16x26
+ 206 0050 00000000 		.word	.LC0
+ 207 0054 00000000 		.word	Font_11x18
+ 208 0058 0C000000 		.word	.LC1
+ 209 005c 00000000 		.word	Font_7x10
+ 210 0060 18000000 		.word	.LC2
+ 211              		.cfi_endproc
+ 212              	.LFE67:
+ 214              		.global	__aeabi_i2f
+ 215              		.global	__aeabi_f2d
+ 216              		.global	__aeabi_ui2d
+ 217              		.global	__aeabi_ddiv
+ 218              		.global	__aeabi_d2iz
+ 219              		.section	.text.SSD1306_TestFPS,"ax",%progbits
+ 220              		.align	1
+ 221              		.global	SSD1306_TestFPS
+ 222              		.syntax unified
+ 223              		.thumb
+ 224              		.thumb_func
+ 225              		.fpu softvfp
+ 227              	SSD1306_TestFPS:
+ 228              	.LFB68:
+  43:Drivers/ssd1306/ssd1306_tests.c **** 
+  44:Drivers/ssd1306/ssd1306_tests.c **** void SSD1306_TestFPS() {
+ 229              		.loc 1 44 0
+ 230              		.cfi_startproc
+ 231              		@ args = 0, pretend = 0, frame = 80
+ 232              		@ frame_needed = 0, uses_anonymous_args = 0
+ 233 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 234              	.LCFI2:
+ 235              		.cfi_def_cfa_offset 20
+ 236              		.cfi_offset 4, -20
+ 237              		.cfi_offset 5, -16
+ARM GAS  /var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s 			page 6
+
+
+ 238              		.cfi_offset 6, -12
+ 239              		.cfi_offset 7, -8
+ 240              		.cfi_offset 14, -4
+ 241 0002 95B0     		sub	sp, sp, #84
+ 242              	.LCFI3:
+ 243              		.cfi_def_cfa_offset 104
+  45:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_Fill(White);
+ 244              		.loc 1 45 0
+ 245 0004 0120     		movs	r0, #1
+ 246 0006 FFF7FEFF 		bl	SSD1306_Fill
+ 247              	.LVL28:
+  46:Drivers/ssd1306/ssd1306_tests.c ****    
+  47:Drivers/ssd1306/ssd1306_tests.c ****     uint32_t start = HAL_GetTick();
+ 248              		.loc 1 47 0
+ 249 000a FFF7FEFF 		bl	HAL_GetTick
+ 250              	.LVL29:
+ 251 000e 0646     		mov	r6, r0
+ 252              	.LVL30:
+  48:Drivers/ssd1306/ssd1306_tests.c ****     uint32_t end = start;
+  49:Drivers/ssd1306/ssd1306_tests.c ****     int fps = 0;
+  50:Drivers/ssd1306/ssd1306_tests.c ****     char message[] = "ABCDEFGHIJK";
+ 253              		.loc 1 50 0
+ 254 0010 2F4B     		ldr	r3, .L18
+ 255 0012 93E80700 		ldm	r3, {r0, r1, r2}
+ 256              	.LVL31:
+ 257 0016 14AB     		add	r3, sp, #80
+ 258 0018 03E90700 		stmdb	r3, {r0, r1, r2}
+  51:Drivers/ssd1306/ssd1306_tests.c ****    
+  52:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_SetCursor(2,0);
+ 259              		.loc 1 52 0
+ 260 001c 0021     		movs	r1, #0
+ 261 001e 0220     		movs	r0, #2
+ 262 0020 FFF7FEFF 		bl	SSD1306_SetCursor
+ 263              	.LVL32:
+  53:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_WriteString("Testing...", Font_11x18, Black);
+ 264              		.loc 1 53 0
+ 265 0024 2B4A     		ldr	r2, .L18+4
+ 266 0026 0023     		movs	r3, #0
+ 267 0028 06CA     		ldm	r2, {r1, r2}
+ 268 002a 2B48     		ldr	r0, .L18+8
+ 269 002c FFF7FEFF 		bl	SSD1306_WriteString
+ 270              	.LVL33:
+  49:Drivers/ssd1306/ssd1306_tests.c ****     char message[] = "ABCDEFGHIJK";
+ 271              		.loc 1 49 0
+ 272 0030 0024     		movs	r4, #0
+ 273              	.LVL34:
+ 274              	.L16:
+ 275              	.LBB2:
+  54:Drivers/ssd1306/ssd1306_tests.c ****    
+  55:Drivers/ssd1306/ssd1306_tests.c ****     do {
+  56:Drivers/ssd1306/ssd1306_tests.c ****         SSD1306_SetCursor(2, 18);
+ 276              		.loc 1 56 0 discriminator 1
+ 277 0032 1221     		movs	r1, #18
+ 278 0034 0220     		movs	r0, #2
+ 279 0036 FFF7FEFF 		bl	SSD1306_SetCursor
+ 280              	.LVL35:
+  57:Drivers/ssd1306/ssd1306_tests.c ****         SSD1306_WriteString(message, Font_11x18, Black);
+ARM GAS  /var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s 			page 7
+
+
+ 281              		.loc 1 57 0 discriminator 1
+ 282 003a 264A     		ldr	r2, .L18+4
+ 283 003c 0023     		movs	r3, #0
+ 284 003e 06CA     		ldm	r2, {r1, r2}
+ 285 0040 11A8     		add	r0, sp, #68
+ 286 0042 FFF7FEFF 		bl	SSD1306_WriteString
+ 287              	.LVL36:
+  58:Drivers/ssd1306/ssd1306_tests.c ****         SSD1306_UpdateScreen();
+ 288              		.loc 1 58 0 discriminator 1
+ 289 0046 FFF7FEFF 		bl	SSD1306_UpdateScreen
+ 290              	.LVL37:
+  59:Drivers/ssd1306/ssd1306_tests.c ****        
+  60:Drivers/ssd1306/ssd1306_tests.c ****         char ch = message[0];
+ 291              		.loc 1 60 0 discriminator 1
+ 292 004a 9DF84450 		ldrb	r5, [sp, #68]	@ zero_extendqisi2
+ 293              	.LVL38:
+  61:Drivers/ssd1306/ssd1306_tests.c ****         memmove(message, message+1, sizeof(message)-2);
+ 294              		.loc 1 61 0 discriminator 1
+ 295 004e 0A22     		movs	r2, #10
+ 296 0050 0DF14501 		add	r1, sp, #69
+ 297 0054 11A8     		add	r0, sp, #68
+ 298 0056 FFF7FEFF 		bl	memmove
+ 299              	.LVL39:
+  62:Drivers/ssd1306/ssd1306_tests.c ****         message[sizeof(message)-2] = ch;
+ 300              		.loc 1 62 0 discriminator 1
+ 301 005a 8DF84E50 		strb	r5, [sp, #78]
+  63:Drivers/ssd1306/ssd1306_tests.c **** 
+  64:Drivers/ssd1306/ssd1306_tests.c ****         fps++;
+ 302              		.loc 1 64 0 discriminator 1
+ 303 005e 0134     		adds	r4, r4, #1
+ 304              	.LVL40:
+  65:Drivers/ssd1306/ssd1306_tests.c ****         end = HAL_GetTick();
+ 305              		.loc 1 65 0 discriminator 1
+ 306 0060 FFF7FEFF 		bl	HAL_GetTick
+ 307              	.LVL41:
+ 308              	.LBE2:
+  66:Drivers/ssd1306/ssd1306_tests.c ****     } while((end - start) < 5000);
+ 309              		.loc 1 66 0 discriminator 1
+ 310 0064 851B     		subs	r5, r0, r6
+ 311              	.LVL42:
+ 312 0066 41F28733 		movw	r3, #4999
+ 313 006a 9D42     		cmp	r5, r3
+ 314 006c E1D9     		bls	.L16
+  67:Drivers/ssd1306/ssd1306_tests.c ****    
+  68:Drivers/ssd1306/ssd1306_tests.c ****     HAL_Delay(1000);
+ 315              		.loc 1 68 0
+ 316 006e 4FF47A70 		mov	r0, #1000
+ 317              	.LVL43:
+ 318 0072 FFF7FEFF 		bl	HAL_Delay
+ 319              	.LVL44:
+  69:Drivers/ssd1306/ssd1306_tests.c **** 
+  70:Drivers/ssd1306/ssd1306_tests.c ****     char buff[64];
+  71:Drivers/ssd1306/ssd1306_tests.c ****     fps = (float)fps / ((end - start) / 1000.0);
+ 320              		.loc 1 71 0
+ 321 0076 2046     		mov	r0, r4
+ 322 0078 FFF7FEFF 		bl	__aeabi_i2f
+ 323              	.LVL45:
+ARM GAS  /var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s 			page 8
+
+
+ 324 007c FFF7FEFF 		bl	__aeabi_f2d
+ 325              	.LVL46:
+ 326 0080 0646     		mov	r6, r0
+ 327              	.LVL47:
+ 328 0082 0F46     		mov	r7, r1
+ 329 0084 2846     		mov	r0, r5
+ 330 0086 FFF7FEFF 		bl	__aeabi_ui2d
+ 331              	.LVL48:
+ 332 008a 0022     		movs	r2, #0
+ 333 008c 134B     		ldr	r3, .L18+12
+ 334 008e FFF7FEFF 		bl	__aeabi_ddiv
+ 335              	.LVL49:
+ 336 0092 0246     		mov	r2, r0
+ 337 0094 0B46     		mov	r3, r1
+ 338 0096 3046     		mov	r0, r6
+ 339 0098 3946     		mov	r1, r7
+ 340 009a FFF7FEFF 		bl	__aeabi_ddiv
+ 341              	.LVL50:
+ 342 009e FFF7FEFF 		bl	__aeabi_d2iz
+ 343              	.LVL51:
+  72:Drivers/ssd1306/ssd1306_tests.c ****     snprintf(buff, sizeof(buff), "~%d FPS", fps);
+ 344              		.loc 1 72 0
+ 345 00a2 0346     		mov	r3, r0
+ 346 00a4 0E4A     		ldr	r2, .L18+16
+ 347 00a6 4021     		movs	r1, #64
+ 348 00a8 01A8     		add	r0, sp, #4
+ 349              	.LVL52:
+ 350 00aa FFF7FEFF 		bl	snprintf
+ 351              	.LVL53:
+  73:Drivers/ssd1306/ssd1306_tests.c ****    
+  74:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_Fill(White);
+ 352              		.loc 1 74 0
+ 353 00ae 0120     		movs	r0, #1
+ 354 00b0 FFF7FEFF 		bl	SSD1306_Fill
+ 355              	.LVL54:
+  75:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_SetCursor(2, 18);
+ 356              		.loc 1 75 0
+ 357 00b4 1221     		movs	r1, #18
+ 358 00b6 0220     		movs	r0, #2
+ 359 00b8 FFF7FEFF 		bl	SSD1306_SetCursor
+ 360              	.LVL55:
+  76:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_WriteString(buff, Font_11x18, Black);
+ 361              		.loc 1 76 0
+ 362 00bc 054A     		ldr	r2, .L18+4
+ 363 00be 0023     		movs	r3, #0
+ 364 00c0 06CA     		ldm	r2, {r1, r2}
+ 365 00c2 01A8     		add	r0, sp, #4
+ 366 00c4 FFF7FEFF 		bl	SSD1306_WriteString
+ 367              	.LVL56:
+  77:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_UpdateScreen();
+ 368              		.loc 1 77 0
+ 369 00c8 FFF7FEFF 		bl	SSD1306_UpdateScreen
+ 370              	.LVL57:
+  78:Drivers/ssd1306/ssd1306_tests.c **** }
+ 371              		.loc 1 78 0
+ 372 00cc 15B0     		add	sp, sp, #84
+ 373              	.LCFI4:
+ARM GAS  /var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s 			page 9
+
+
+ 374              		.cfi_def_cfa_offset 20
+ 375              		@ sp needed
+ 376 00ce F0BD     		pop	{r4, r5, r6, r7, pc}
+ 377              	.L19:
+ 378              		.align	2
+ 379              	.L18:
+ 380 00d0 14000000 		.word	.LC3
+ 381 00d4 00000000 		.word	Font_11x18
+ 382 00d8 00000000 		.word	.LC4
+ 383 00dc 00408F40 		.word	1083129856
+ 384 00e0 0C000000 		.word	.LC5
+ 385              		.cfi_endproc
+ 386              	.LFE68:
+ 388              		.section	.text.SSD1306_TestAll,"ax",%progbits
+ 389              		.align	1
+ 390              		.global	SSD1306_TestAll
+ 391              		.syntax unified
+ 392              		.thumb
+ 393              		.thumb_func
+ 394              		.fpu softvfp
+ 396              	SSD1306_TestAll:
+ 397              	.LFB69:
+  79:Drivers/ssd1306/ssd1306_tests.c **** 
+  80:Drivers/ssd1306/ssd1306_tests.c **** void SSD1306_TestAll() {
+ 398              		.loc 1 80 0
+ 399              		.cfi_startproc
+ 400              		@ args = 0, pretend = 0, frame = 0
+ 401              		@ frame_needed = 0, uses_anonymous_args = 0
+ 402 0000 08B5     		push	{r3, lr}
+ 403              	.LCFI5:
+ 404              		.cfi_def_cfa_offset 8
+ 405              		.cfi_offset 3, -8
+ 406              		.cfi_offset 14, -4
+  81:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_Init();
+ 407              		.loc 1 81 0
+ 408 0002 FFF7FEFF 		bl	SSD1306_Init
+ 409              	.LVL58:
+  82:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_TestFPS();
+ 410              		.loc 1 82 0
+ 411 0006 FFF7FEFF 		bl	SSD1306_TestFPS
+ 412              	.LVL59:
+  83:Drivers/ssd1306/ssd1306_tests.c ****     HAL_Delay(3000);
+ 413              		.loc 1 83 0
+ 414 000a 40F6B830 		movw	r0, #3000
+ 415 000e FFF7FEFF 		bl	HAL_Delay
+ 416              	.LVL60:
+  84:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_TestBorder();
+ 417              		.loc 1 84 0
+ 418 0012 FFF7FEFF 		bl	SSD1306_TestBorder
+ 419              	.LVL61:
+  85:Drivers/ssd1306/ssd1306_tests.c ****     SSD1306_TestFonts();
+ 420              		.loc 1 85 0
+ 421 0016 FFF7FEFF 		bl	SSD1306_TestFonts
+ 422              	.LVL62:
+  86:Drivers/ssd1306/ssd1306_tests.c **** }
+ 423              		.loc 1 86 0
+ 424 001a 08BD     		pop	{r3, pc}
+ARM GAS  /var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s 			page 10
+
+
+ 425              		.cfi_endproc
+ 426              	.LFE69:
+ 428              		.section	.rodata.SSD1306_TestFPS.str1.4,"aMS",%progbits,1
+ 429              		.align	2
+ 430              	.LC4:
+ 431 0000 54657374 		.ascii	"Testing...\000"
+ 431      696E672E 
+ 431      2E2E00
+ 432 000b 00       		.space	1
+ 433              	.LC5:
+ 434 000c 7E256420 		.ascii	"~%d FPS\000"
+ 434      46505300 
+ 435              	.LC3:
+ 436 0014 41424344 		.ascii	"ABCDEFGHIJK\000"
+ 436      45464748 
+ 436      494A4B00 
+ 437              		.section	.rodata.SSD1306_TestFonts.str1.4,"aMS",%progbits,1
+ 438              		.align	2
+ 439              	.LC0:
+ 440 0000 466F6E74 		.ascii	"Font 16x26\000"
+ 440      20313678 
+ 440      323600
+ 441 000b 00       		.space	1
+ 442              	.LC1:
+ 443 000c 466F6E74 		.ascii	"Font 11x18\000"
+ 443      20313178 
+ 443      313800
+ 444 0017 00       		.space	1
+ 445              	.LC2:
+ 446 0018 466F6E74 		.ascii	"Font 7x10\000"
+ 446      20377831 
+ 446      3000
+ 447              		.text
+ 448              	.Letext0:
+ 449              		.file 2 "/Users/jason/CMDTools/gcc-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h"
+ 450              		.file 3 "/Users/jason/CMDTools/gcc-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h"
+ 451              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 452              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 453              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 454              		.file 7 "/Users/jason/CMDTools/gcc-arm-none-eabi/arm-none-eabi/include/sys/lock.h"
+ 455              		.file 8 "/Users/jason/CMDTools/gcc-arm-none-eabi/arm-none-eabi/include/sys/_types.h"
+ 456              		.file 9 "/Users/jason/CMDTools/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h"
+ 457              		.file 10 "/Users/jason/CMDTools/gcc-arm-none-eabi/arm-none-eabi/include/sys/reent.h"
+ 458              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 459              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 460              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
+ 461              		.file 14 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h"
+ 462              		.file 15 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 463              		.file 16 "Drivers/ssd1306/ssd1306_fonts.h"
+ 464              		.file 17 "Inc/i2c.h"
+ 465              		.file 18 "Drivers/ssd1306/ssd1306.h"
+ 466              		.file 19 "/Users/jason/CMDTools/gcc-arm-none-eabi/arm-none-eabi/include/string.h"
+ 467              		.file 20 "/Users/jason/CMDTools/gcc-arm-none-eabi/arm-none-eabi/include/stdio.h"
+ARM GAS  /var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ssd1306_tests.c
+/var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s:16     .text.SSD1306_TestBorder:0000000000000000 $t
+/var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s:23     .text.SSD1306_TestBorder:0000000000000000 SSD1306_TestBorder
+/var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s:139    .text.SSD1306_TestFonts:0000000000000000 $t
+/var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s:146    .text.SSD1306_TestFonts:0000000000000000 SSD1306_TestFonts
+/var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s:205    .text.SSD1306_TestFonts:000000000000004c $d
+/var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s:220    .text.SSD1306_TestFPS:0000000000000000 $t
+/var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s:227    .text.SSD1306_TestFPS:0000000000000000 SSD1306_TestFPS
+/var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s:380    .text.SSD1306_TestFPS:00000000000000d0 $d
+/var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s:389    .text.SSD1306_TestAll:0000000000000000 $t
+/var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s:396    .text.SSD1306_TestAll:0000000000000000 SSD1306_TestAll
+/var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s:429    .rodata.SSD1306_TestFPS.str1.4:0000000000000000 $d
+/var/folders/5z/_9rkktvd05b3324pd1f03y0c0000gn/T//ccVOhc7d.s:438    .rodata.SSD1306_TestFonts.str1.4:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+SSD1306_Fill
+HAL_GetTick
+SSD1306_DrawPixel
+SSD1306_UpdateScreen
+HAL_Delay
+SSD1306_SetCursor
+SSD1306_WriteString
+Font_16x26
+Font_11x18
+Font_7x10
+__aeabi_i2f
+__aeabi_f2d
+__aeabi_ui2d
+__aeabi_ddiv
+__aeabi_d2iz
+memmove
+snprintf
+SSD1306_Init
