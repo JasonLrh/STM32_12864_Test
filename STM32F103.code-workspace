@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "/Users/jason/Desktop/STM32F1"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"main.h": "c",
+			"stdarg.h": "c",
+			"stdio.h": "c"
+		}
+	}
+}
